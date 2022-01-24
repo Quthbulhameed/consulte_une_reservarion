@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo3.FXMLDocumentController">
+    <children>
+        <AnchorPane prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TextField fx:id="txt_etage" layoutX="24.0" layoutY="108.0" onKeyReleased="#search_user" prefHeight="30.0" prefWidth="180.0" promptText="etage" />
+                <TextField fx:id="txt_numParking" layoutX="24.0" layoutY="157.0" prefHeight="30.0" prefWidth="180.0" promptText="numParking" />
+                <TextField fx:id="txt_disponibilite" layoutX="24.0" layoutY="208.0" prefHeight="30.0" prefWidth="180.0" promptText="disponibilite" />
+                <TextField fx:id="txt_reservation" layoutX="24.0" layoutY="259.0" prefHeight="30.0" prefWidth="180.0" promptText="reservation" />
+                <TextField fx:id="txt_categorie" layoutX="24.0" layoutY="259.0" prefHeight="30.0" prefWidth="180.0" promptText="categorie" />
+                <TextField fx:id="txt_typevoiture" layoutX="24.0" layoutY="259.0" prefHeight="30.0" prefWidth="180.0" promptText="typevoiture" />
+                <TextField fx:id="txt_id" layoutX="24.0" layoutY="60.0" prefHeight="23.0" prefWidth="180.0" promptText="ID" />
+            </children>
+        </AnchorPane>
+        <TableView fx:id="table_place" layoutX="260.0" layoutY="155.0" onMouseClicked="#getSelected" prefHeight="362.0" prefWidth="572.0">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="col_etage" prefWidth="75.0" text="Etage" />
+                <TableColumn fx:id="col_numParking" prefWidth="92.0" text="NumParking" />
+                <TableColumn fx:id="col_disponibilite" prefWidth="97.0" text="Disponibilite" />
+                <TableColumn fx:id="col_reservation" prefWidth="115.0" text="Reservation" />
+                <TableColumn fx:id="col_categorie" prefWidth="115.0" text="Categorie" />
+                <TableColumn fx:id="col_typevoiture" prefWidth="115.0" text="Typevoiture" />
+
+            </columns>
+        </TableView>
+        <TextField fx:id="filterField" layoutX="335.0" layoutY="95.0" prefHeight="39.0" prefWidth="228.0" promptText="Etage" />
+      <DatePicker layoutX="335.0" layoutY="45.0" prefHeight="39.0" prefWidth="228.0" promptText="Date" />
+          <Button layoutX="661.0" layoutY="540.0" mnemonicParsing="false" onAction="#Delete" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Delete" />
+
+                <Button layoutX="449.0" layoutY="540.0" mnemonicParsing="false" onAction="#Edit" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Update" />
+
+    </children>
+</AnchorPane>
